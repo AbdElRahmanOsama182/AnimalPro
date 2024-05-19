@@ -72,6 +72,7 @@ animals([
         animal(wolf, [is_true("is carnivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("howls")]),
         animal(cheetah, [is_true("is carnivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("chirps")]),
         animal(crocodile, [is_true("is carnivore"), is_true("is large"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
+        animal(eagle, [is_true("is carnivore"), is_true("is large"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("screeches")]),
         animal(snake, [is_true("is carnivore"), is_true("is regular-sized"), is_true("does it crawl"), is_true("has skin"), is_true("is wild"), is_true("hisses")]),
         animal(cat, [is_true("is carnivore"), is_true("is small"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says meow")]),
         
@@ -81,7 +82,6 @@ animals([
         animal(camel, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("grunts")]),
         animal(zebra, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("barks")]),
         animal(peacock, [is_true("is herbivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("calls")])
-
         ]).
         
 animal(A) :-
