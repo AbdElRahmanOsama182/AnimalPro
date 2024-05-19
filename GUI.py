@@ -66,7 +66,7 @@ class AnimalGUI(QWidget):
         self.title.setFont(QFont('Arial', 10, QFont.Normal))
         self.layout.addWidget(self.title)
 
-        self.question_label = QLabel("Answer the questions to identify the animal:")
+        self.question_label = QLabel("")
         self.question_label.setObjectName('questionLabel')
         self.question_label.setFixedHeight(50)
         self.question_label.setAlignment(Qt.AlignCenter)
@@ -85,12 +85,17 @@ class AnimalGUI(QWidget):
         self.no_button.setObjectName('noButton')
         self.no_button.clicked.connect(lambda: self.handle_submit('no'))
         self.button_layout.addWidget(self.no_button)
+        self.button_layout.setContentsMargins(0, 0, 0, 0)
 
         self.layout.addLayout(self.button_layout)
 
         self.result_label = QLabel("")
         self.result_label.setAlignment(Qt.AlignCenter)
         self.result_label.setFont(QFont('Arial', 12, QFont.Bold))
+        self.result_label.setContentsMargins(15, 5, 10, 5)
+        self.result_label.setFixedWidth(390)
+        self.result_label.setWordWrap(True)
+        self.result_label.hide()
         self.layout.addWidget(self.result_label)
 
         self.image_label = QLabel("")
@@ -107,6 +112,8 @@ class AnimalGUI(QWidget):
         # remove margin and padding
         self.restart_button.setContentsMargins(0, 0, 0, 0)
         self.layout.addWidget(self.restart_button, alignment=Qt.AlignCenter)
+        self.layout.setAlignment(Qt.AlignCenter)
+        self.layout.setContentsMargins(5, 5, 5, 5)
         # self.layout.addWidget(self.restart_button)
 
         self.setLayout(self.layout)
@@ -136,12 +143,12 @@ class AnimalGUI(QWidget):
             animal_name = output.split('=')[1].strip().strip('.')
             print(f"Animal name: {animal_name}")
             self.display_animal_image(animal_name)
-            self.result_label.setText(f"The animal you're thinking of is a {animal_name}.")
             self.restart_button.show()
         else:
             self.result_label.setText("I'm not sure what animal you're thinking of.")
-            # self.image_label.clear()
+            self.result_label.show()
             self.restart_button.show()
+            self.adjustSize()
 
     def read_output(self):
         output = []
@@ -151,19 +158,21 @@ class AnimalGUI(QWidget):
                 print("Line: ", line)
                 output.append(line)
                 if line.strip().endswith('?'):
-                    self.question_label.setText(''.join(output))
+                    question = line.strip().capitalize()[:-1] + ' ?'
+                    self.question_label.setText(question)
                     break
                 elif '=' in line:
                     self.check_result(line)
                     break
                 elif 'false.' in line:
                     self.result_label.setText("I'm not sure what animal you're thinking of.")
-                    # self.image_label.clear()
+                    self.result_label.show()
                     self.yes_button.hide()
                     self.no_button.hide()
                     self.title.hide()
                     self.question_label.hide()
                     self.restart_button.show()
+                    self.adjustSize()
                     break
             else:
                 break
@@ -181,6 +190,8 @@ class AnimalGUI(QWidget):
         self.no_button.hide()
         self.title.hide()
         self.question_label.hide()
+        self.result_label.setText(f"The animal you're thinking of is a {animal_name.capitalize()}.")
+        self.result_label.show()
         pixmap = QPixmap(f"assets/{animal_name}.jpg")
         if pixmap.isNull():
             self.image_label.setText(f"No image found for {animal_name}")
@@ -191,11 +202,12 @@ class AnimalGUI(QWidget):
             self.image_label.setFixedHeight(400)
             self.image_label.setFixedWidth(400)
             self.image_label.setAlignment(Qt.AlignCenter)
+        self.adjustSize()
         print("Displaying animal image")
 
     def display_mystery_image(self):
         # Display the mystery image initially
-        pixmap = QPixmap("assets/mystery.jpeg")
+        pixmap = QPixmap("assets/mystery.jpg")
         if pixmap.isNull():
             self.image_label.setText("No mystery image found")
         else:
@@ -221,7 +233,8 @@ class AnimalGUI(QWidget):
         self.title.show()
         self.question_label.show()
         self.restart_button.hide()
-        self.resize(400, 400)
+        self.result_label.hide()
+        self.adjustSize()
         print("Restart button clicked")
 
 if __name__ == '__main__':
