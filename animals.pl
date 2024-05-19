@@ -1,4 +1,15 @@
 :- use_module(library(reif)).
+
+% Define the categories for different characteristics
+mapToCategory("barks", sound).
+mapToCategory("says meow", sound).
+mapToCategory("grunts", sound).
+mapToCategory("screeches", sound).
+
+mapToCategory("is omnivore", diet).
+mapToCategory("is carnivore", diet).
+mapToCategory("is herbivore", diet).
+
 animals([animal(dog, [is_true("has fur"), is_true("barks"), is_true("is domestic"), is_true("does it run"), is_true("is regular-sized"), is_true("is omnivore")]),
         animal(cat, [is_true("has fur"), is_true("says meow"), is_true("is domestic"), is_true("does it run"), is_true("is small"), is_true("is carnivore")]),
         animal(camel, [is_true("has fur"), is_true("grunts"), is_true("does it run"), is_true("is large"), is_true("is herbivore")]),
@@ -43,7 +54,10 @@ checkRule(is_true(Q), Answer, Known0, Known) :-
     % If the rule is not known
     ( format("~s?\n", [Q]),
         read(Answer),
-        Known = [known(Q,Answer)|Known0])).
+        (mapToCategory(Q, Category) ->
+            updateCategory(Category, Q, Answer, Known0, Known)
+        ;
+            Known = [known(Q, Answer)|Known0]))).
 
 % Check if the rule is already known
 ruleIsKnown(What, Answer, Known, Truth) :-
@@ -55,3 +69,11 @@ ruleIsKnown(What, Answer, Known, Truth) :-
         ( Answer = no, Truth = true),
     % If the rule is not known
         Truth = false)).
+
+% Helper predicate to update known facts based on category
+% if the answer is yes, then the rule is true and all other rules in the same category are false
+updateCategory(Category, Q, yes, Known0, Known) :-
+    findall(known(OtherQ, no), (mapToCategory(OtherQ, Category), OtherQ \= Q), OtherQs),
+    append([known(Q, yes)|OtherQs], Known0, Known).
+% if the answer is no, then the rule is false
+updateCategory(_, Q, no, Known0, [known(Q, no)|Known0]).
