@@ -65,7 +65,7 @@ animals([
         animal(crocodile, [is_true("is carnivore"), is_true("is large"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
         animal(camel, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("grunts")]),
         animal(cow, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says moo")]),
-        animal(deer, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("bleats")])
+        animal(deer, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("bleats")])
         ]).
         
 animal(A) :-
