@@ -17,15 +17,16 @@ class AnimalGUI(QWidget):
 
         self.setStyleSheet("""
             QWidget {
-                background-color: #f0f0f0;
+                background-color: #018cc7;
             }
             QLabel {
-                color: #333;
+                color: azure;
                 padding: 0px;
                 margin: 0px;
+                font-family: Arial;
             }
             QLabel#questionLabel {
-                font-size: 18px;
+                font-size: 20px;
             }
             QLineEdit {
                 font-size: 14px;
@@ -35,6 +36,8 @@ class AnimalGUI(QWidget):
             }
             QPushButton {
                 font-size: 16px;
+                font-weight: bold;
+                font-family: Arial;
                 padding: 5px;
                 color: white;
                 border: none;
@@ -53,17 +56,17 @@ class AnimalGUI(QWidget):
                 background-color: #c82333;
             }
             QPushButton#submitButton {
-                background-color: #007bff;
+                background-color: #fd8d01;
             }
             QPushButton#submitButton:hover {
-                background-color: #0056b3;
+                background-color: #f76b00;
             }
         """)
 
 
         self.title = QLabel("Answer the questions to identify the animal:")
         self.title.setFixedHeight(50)
-        self.title.setFont(QFont('Arial', 10, QFont.Normal))
+        self.title.setFont(QFont('Arial', 10, QFont.Bold))
         self.layout.addWidget(self.title)
 
         self.question_label = QLabel("")
@@ -77,12 +80,14 @@ class AnimalGUI(QWidget):
         self.yes_button = QPushButton('Yes')
         self.yes_button.setCursor(Qt.PointingHandCursor)
         self.yes_button.setObjectName('yesButton')
+        self.yes_button.setFixedWidth(150)
         self.yes_button.clicked.connect(lambda: self.handle_submit('yes'))
         self.button_layout.addWidget(self.yes_button)
 
         self.no_button = QPushButton('No')
         self.no_button.setCursor(Qt.PointingHandCursor)
         self.no_button.setObjectName('noButton')
+        self.no_button.setFixedWidth(150)
         self.no_button.clicked.connect(lambda: self.handle_submit('no'))
         self.button_layout.addWidget(self.no_button)
         self.button_layout.setContentsMargins(0, 0, 0, 0)
@@ -92,7 +97,7 @@ class AnimalGUI(QWidget):
         self.result_label = QLabel("")
         self.result_label.setAlignment(Qt.AlignCenter)
         self.result_label.setFont(QFont('Arial', 12, QFont.Bold))
-        self.result_label.setContentsMargins(15, 5, 10, 5)
+        self.result_label.setContentsMargins(5, 20, 5, 20)
         self.result_label.setFixedWidth(390)
         self.result_label.setWordWrap(True)
         self.result_label.hide()
@@ -106,6 +111,7 @@ class AnimalGUI(QWidget):
         self.restart_button = QPushButton('Restart')
         self.restart_button.setObjectName('submitButton')
         self.restart_button.setFixedWidth(200)
+        self.restart_button.setFont(QFont('Arial', 12, QFont.Bold))
         self.restart_button.setCursor(Qt.PointingHandCursor)
         self.restart_button.clicked.connect(self.restart)
         self.restart_button.hide()
