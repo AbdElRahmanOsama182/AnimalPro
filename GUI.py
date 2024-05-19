@@ -27,22 +27,22 @@ class AnimalGUI(QWidget):
                 font-family: Arial;
             }
             QLabel#questionLabel {
-                font-size: 20px;
+                font-size: 26px;
             }
             QLineEdit {
-                font-size: 14px;
+                font-size: 16px;
                 padding: 5px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
             }
             QPushButton {
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: bold;
                 font-family: Arial;
-                padding: 5px;
+                padding: 10px;
                 color: white;
                 border: none;
-                border-radius: 5px;
+                border-radius: 7px;
             }
             QPushButton#yesButton {
                 background-color: #28a745;
@@ -67,7 +67,7 @@ class AnimalGUI(QWidget):
 
         self.title = QLabel("Answer the questions to identify the animal:")
         self.title.setFixedHeight(50)
-        self.title.setFont(QFont('Arial', 10, QFont.Bold))
+        self.title.setFont(QFont('Arial', 12, QFont.Bold))
         self.layout.addWidget(self.title)
 
         self.question_label = QLabel("")
@@ -81,14 +81,14 @@ class AnimalGUI(QWidget):
         self.yes_button = QPushButton('Yes')
         self.yes_button.setCursor(Qt.PointingHandCursor)
         self.yes_button.setObjectName('yesButton')
-        self.yes_button.setFixedWidth(150)
+        self.yes_button.setFixedWidth(160)
         self.yes_button.clicked.connect(lambda: self.handle_submit('yes'))
         self.button_layout.addWidget(self.yes_button)
 
         self.no_button = QPushButton('No')
         self.no_button.setCursor(Qt.PointingHandCursor)
         self.no_button.setObjectName('noButton')
-        self.no_button.setFixedWidth(150)
+        self.no_button.setFixedWidth(160)
         self.no_button.clicked.connect(lambda: self.handle_submit('no'))
         self.button_layout.addWidget(self.no_button)
         self.button_layout.setContentsMargins(0, 0, 0, 0)
@@ -97,9 +97,9 @@ class AnimalGUI(QWidget):
 
         self.result_label = QLabel("")
         self.result_label.setAlignment(Qt.AlignCenter)
-        self.result_label.setFont(QFont('Arial', 12, QFont.Bold))
-        self.result_label.setContentsMargins(5, 10, 5, 10)
-        self.result_label.setFixedWidth(390)
+        self.result_label.setFont(QFont('Arial', 14, QFont.Bold))
+        self.result_label.setContentsMargins(15, 20, 15, 20)
+        self.result_label.setFixedWidth(570)
         self.result_label.setFixedHeight(100)
         self.result_label.setWordWrap(True)
         self.result_label.hide()
@@ -113,7 +113,7 @@ class AnimalGUI(QWidget):
         self.restart_button = QPushButton('Restart')
         self.restart_button.setObjectName('submitButton')
         self.restart_button.setFixedWidth(200)
-        self.restart_button.setFont(QFont('Arial', 12, QFont.Bold))
+        self.restart_button.setFont(QFont('Arial', 14, QFont.Bold))
         self.restart_button.setCursor(Qt.PointingHandCursor)
         self.restart_button.clicked.connect(self.restart)
         self.restart_button.hide()
@@ -121,11 +121,11 @@ class AnimalGUI(QWidget):
         self.restart_button.setContentsMargins(0, 0, 0, 0)
         self.layout.addWidget(self.restart_button, alignment=Qt.AlignCenter)
         self.layout.setAlignment(Qt.AlignCenter)
-        self.layout.setContentsMargins(5, 5, 5, 5)
+        self.layout.setContentsMargins(10, 10, 10, 10)
         # self.layout.addWidget(self.restart_button)
 
         self.setLayout(self.layout)
-        self.resize(400, 400)
+        self.resize(600, 600)
 
         # Display the mystery image initially
         self.display_mystery_image()
@@ -213,8 +213,8 @@ class AnimalGUI(QWidget):
             self.image_label.setPixmap(pixmap)
             self.image_label.setScaledContents(True)
             # self.image_label.resize(200, 200)
-            self.image_label.setFixedHeight(400)
-            self.image_label.setFixedWidth(400)
+            self.image_label.setFixedHeight(600)
+            self.image_label.setFixedWidth(600)
             self.image_label.setAlignment(Qt.AlignCenter)
         self.adjustSize()
         print("Displaying animal image")
@@ -228,8 +228,8 @@ class AnimalGUI(QWidget):
             self.image_label.setPixmap(pixmap)
             self.image_label.setScaledContents(True)
             # self.image_label.resize(200, 200)
-            self.image_label.setFixedHeight(400)
-            self.image_label.setFixedWidth(400)
+            self.image_label.setFixedHeight(600)
+            self.image_label.setFixedWidth(600)
             self.image_label.setAlignment(Qt.AlignCenter)
         print("Displaying mystery image")
 
