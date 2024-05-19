@@ -5,15 +5,61 @@ mapToCategory("barks", sound).
 mapToCategory("says meow", sound).
 mapToCategory("grunts", sound).
 mapToCategory("screeches", sound).
+mapToCategory("is silent", sound).
+mapToCategory("chrips", sound).
+mapToCategory("clucks", sound).
+mapToCategory("says moo", sound).
+mapToCategory("roars", sound).
+mapToCategory("bellows", sound).
+mapToCategory("clicks", sound).
+mapToCategory("trumpets", sound).
+mapToCategory("croaks", sound).
+mapToCategory("bleats", sound).
+mapToCategory("snuffles", sound).
+mapToCategory("humms", sound).
+mapToCategory("chortles", sound).
+mapToCategory("chatters", sound).
+mapToCategory("booms", sound).
+mapToCategory("hoots", sound).
+mapToCategory("squawks", sound).
+mapToCategory("calls", sound).
+mapToCategory("hisses", sound).
+mapToCategory("clacks", sound).
+mapToCategory("whistles", sound).
+mapToCategory("howls", sound).
 
 mapToCategory("is omnivore", diet).
 mapToCategory("is carnivore", diet).
 mapToCategory("is herbivore", diet).
 
-animals([animal(dog, [is_true("has fur"), is_true("barks"), is_true("is domestic"), is_true("does it run"), is_true("is regular-sized"), is_true("is omnivore")]),
-        animal(cat, [is_true("has fur"), is_true("says meow"), is_true("is domestic"), is_true("does it run"), is_true("is small"), is_true("is carnivore")]),
-        animal(camel, [is_true("has fur"), is_true("grunts"), is_true("does it run"), is_true("is large"), is_true("is herbivore")]),
-        animal(bat, [is_true("has fur"), is_true("screeches"), is_true("does it fly"), is_true("is small"), is_true("is omnivore")])]).
+mapToCategory("is domestic", habitat).
+mapToCategory("is wild", habitat).
+
+mapToCategory("does it run", movement).
+mapToCategory("does it fly", movement).
+mapToCategory("does it swim", movement).
+mapToCategory("does it crawl", movement).
+mapToCategory("does it hop", movement).
+
+mapToCategory("is tiny", size).
+mapToCategory("is small", size).
+mapToCategory("is regular-sized", size).
+mapToCategory("is large", size).
+mapToCategory("is huge", size).
+
+mapToCategory("has fur", coating).
+mapToCategory("has feathers", coating).
+mapToCategory("has scales", coating).
+mapToCategory("has skin", coating).
+mapToCategory("has spines", coating).
+mapToCategory("has jelly", coating).
+mapToCategory("has denticles", coating).
+mapToCategory("has shell", coating).
+
+animals([animal(dog, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("barks")]),
+        animal(bat, [is_true("is omnivore"), is_true("is small"), is_true("does it fly"), is_true("has fur"), is_true("is wild"), is_true("screeches")]),
+        animal(cat, [is_true("is carnivore"), is_true("is small"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says meow")]),
+        animal(camel, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("grunts")])]).
 
 animal(A) :-
     animals(Animals),
