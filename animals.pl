@@ -58,6 +58,7 @@ mapToCategory("has shell", coating).
 
 animals([
         animal(dog, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("barks")]),
+        animal(chicken, [is_true("is omnivore"), is_true("is small"), is_true("does it run"), is_true("has feathers"), is_true("is domestic"), is_true("clucks")]),
         animal(bat, [is_true("is omnivore"), is_true("is small"), is_true("does it fly"), is_true("has fur"), is_true("is wild"), is_true("screeches")]),
         animal(chameleon, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("hisses")]),        
         animal(cat, [is_true("is carnivore"), is_true("is small"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says meow")]),
