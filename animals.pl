@@ -15,7 +15,7 @@ mapToCategory("trumpets", sound).
 mapToCategory("croaks", sound).
 mapToCategory("bleats", sound).
 mapToCategory("snuffles", sound).
-mapToCategory("hums", sound).
+mapToCategory("humms", sound).
 mapToCategory("chortles", sound).
 mapToCategory("chatters", sound).
 mapToCategory("booms", sound).
@@ -39,8 +39,6 @@ mapToCategory("does it fly", movement).
 mapToCategory("does it swim", movement).
 mapToCategory("does it crawl", movement).
 mapToCategory("does it hop", movement).
-mapToCategory("does it fly & swim", movement).
-mapToCategory("does it swim & run", movement).
 mapToCategory("does it fly & swim", movement).
 mapToCategory("does it swim & run", movement).
 
@@ -102,8 +100,6 @@ animals([
         animal(peacock, [is_true("is herbivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("calls")]),
         animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawks")]),
         animal(hummingbird, [is_true("is herbivore"), is_true("is tiny"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("humms")])
-        animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawks")]),
-        animal(hummingbird, [is_true("is herbivore"), is_true("is tiny"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("hums")])
         ]).
         
 animal(A) :-
