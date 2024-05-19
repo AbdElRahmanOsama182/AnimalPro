@@ -58,8 +58,6 @@ mapToCategory("has shell", coating).
 animals([
         animal(dinosaur, [is_true("is omnivore"), is_true("is huge"), is_true("does it run"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
         animal(ostrich, [is_true("is omnivore"), is_true("is large"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("boom")]),
-        animal(dinosaur, [is_true("is omnivore"), is_true("is huge"), is_true("does it run"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
-        animal(ostrich, [is_true("is omnivore"), is_true("is large"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("boom")]),
         animal(dog, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("barks")]),
         animal(monkey, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it climb"), is_true("has fur"), is_true("is wild"), is_true("chatter")]),
         animal(chicken, [is_true("is omnivore"), is_true("is small"), is_true("does it run"), is_true("has feathers"), is_true("is domestic"), is_true("clucks")]),
@@ -85,7 +83,7 @@ animals([
         animal(octopus, [is_true("is carnivore"), is_true("is small"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("is silent")]),
         animal(owl, [is_true("is carnivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("hoot")]),
 
-        animal(elephant, [is_true("is herbivore"), is_true("is huge"), is_true("does it run"), is_true("has skin"), is_true("is wild"), is_true("trumpets")])
+        animal(elephant, [is_true("is herbivore"), is_true("is huge"), is_true("does it run"), is_true("has skin"), is_true("is wild"), is_true("trumpets")]),
         animal(panda, [is_true("is herbivore"), is_true("is large"), is_true("does it climb"), is_true("has fur"), is_true("is wild"), is_true("bleat")]),
         animal(cow, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says moo")]),
         animal(deer, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("bleats")]),
