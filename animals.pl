@@ -58,6 +58,8 @@ mapToCategory("has shell", coating).
 animals([
         animal(dinosaur, [is_true("is omnivore"), is_true("is huge"), is_true("does it run"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
         animal(ostrich, [is_true("is omnivore"), is_true("is large"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("boom")]),
+        animal(dinosaur, [is_true("is omnivore"), is_true("is huge"), is_true("does it run"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
+        animal(ostrich, [is_true("is omnivore"), is_true("is large"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("boom")]),
         animal(dog, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("barks")]),
         animal(monkey, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it climb"), is_true("has fur"), is_true("is wild"), is_true("chatter")]),
         animal(chicken, [is_true("is omnivore"), is_true("is small"), is_true("does it run"), is_true("has feathers"), is_true("is domestic"), is_true("clucks")]),

@@ -98,8 +98,9 @@ class AnimalGUI(QWidget):
         self.result_label = QLabel("")
         self.result_label.setAlignment(Qt.AlignCenter)
         self.result_label.setFont(QFont('Arial', 12, QFont.Bold))
-        self.result_label.setContentsMargins(5, 20, 5, 20)
+        self.result_label.setContentsMargins(5, 10, 5, 10)
         self.result_label.setFixedWidth(390)
+        self.result_label.setFixedHeight(100)
         self.result_label.setWordWrap(True)
         self.result_label.hide()
         self.layout.addWidget(self.result_label)
@@ -197,7 +198,13 @@ class AnimalGUI(QWidget):
         self.no_button.hide()
         self.title.hide()
         self.question_label.hide()
-        self.result_label.setText(f"The animal you're thinking of is a {animal_name.capitalize()}.")
+        text = "The animal you're thinking of is "
+        if animal_name[0].lower() in ['a', 'e', 'i', 'o', 'u']:
+            text += "an "
+        else:
+            text += "a "
+        text += animal_name.capitalize() + "."
+        self.result_label.setText(text)
         self.result_label.show()
         pixmap = QPixmap(f"assets/{animal_name}.jpg")
         if pixmap.isNull():
