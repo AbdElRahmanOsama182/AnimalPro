@@ -66,8 +66,9 @@ animals([
         animal(penguin, [is_true("is omnivore"), is_true("is small"), is_true("does it swim & run"), is_true("has fur"), is_true("is domestic"), is_true("squawks")]),
         animal(turtle, [is_true("is omnivore"), is_true("is small"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("clacks")]),
         animal(lizard, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("is silent")]),
+        animal(hedgehog, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has spines"), is_true("is wild"), is_true("snuffle")]),
         animal(rat, [is_true("is omnivore"), is_true("is tiny"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("screeches")]),
-
+        
         animal(whale, [is_true("is carnivore"), is_true("is huge"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("whistles")]),
         animal(lion, [is_true("is carnivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("roars"),is_true("known as the king of the jungle")]),
         animal(dolphin, [is_true("is carnivore"), is_true("is large"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("clicks")]),
@@ -82,15 +83,19 @@ animals([
         animal(cat, [is_true("is carnivore"), is_true("is small"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says meow")]),
         animal(octopus, [is_true("is carnivore"), is_true("is small"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("is silent")]),
         animal(owl, [is_true("is carnivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("hoot")]),
-
+        animal(jellyfish, [is_true("is carnivore"), is_true("is small"), is_true("does it swim"), is_true("has jelly"), is_true("is wild"), is_true("is silent")]),
+        
+        animal(hippopotamus, [is_true("is herbivore"), is_true("is huge"), is_true("does it swim & run"), is_true("has skin"), is_true("is wild"), is_true("grunt")]),
         animal(elephant, [is_true("is herbivore"), is_true("is huge"), is_true("does it run"), is_true("has skin"), is_true("is wild"), is_true("trumpets")]),
+        animal(kangaroo, [is_true("is herbivore"), is_true("is large"), is_true("does it hop"), is_true("has fur"), is_true("is wild"), is_true("chortle")]),
         animal(panda, [is_true("is herbivore"), is_true("is large"), is_true("does it climb"), is_true("has fur"), is_true("is wild"), is_true("bleat")]),
         animal(cow, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says moo")]),
         animal(deer, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("bleats")]),
         animal(camel, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("grunts")]),
         animal(zebra, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("barks")]),
         animal(peacock, [is_true("is herbivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("calls")]),
-        animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawk")])
+        animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawk")]),
+        animal(hummingbird, [is_true("is herbivore"), is_true("is tiny"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("hum")])
         ]).
         
 animal(A) :-
