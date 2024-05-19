@@ -59,8 +59,8 @@ mapToCategory("has shell", coating).
 animals([animal(dog, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("barks")]),
         animal(bat, [is_true("is omnivore"), is_true("is small"), is_true("does it fly"), is_true("has fur"), is_true("is wild"), is_true("screeches")]),
         animal(penguin, [is_true("is omnivore"), is_true("is small"), is_true("does it swim & run"), is_true("has fur"), is_true("is domestic"), is_true("squawks")]),
-        animal(turtle, [is_true("is omnivore"), is_true("is small"), is_true("does it swim"), is_true("has skin"), is_false("is domestic"), is_true("clacks")]),
-        animal(rat, [is_true("is omnivore"), is_true("is tiny"), is_false("does it swim"), is_true("has fur"), is_true("is domestic"), is_true("screeches")]),
+        animal(turtle, [is_true("is omnivore"), is_true("is small"), is_true("does it swim"), is_true("has shell"), is_true("is wild"), is_true("clacks")]),
+        animal(rat, [is_true("is omnivore"), is_true("is tiny"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("screeches")]),
         
         animal(whale, [is_true("is carnivore"), is_true("is huge"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("whistles")]),
         animal(shark, [is_true("is carnivore"), is_true("is large"), is_true("does it swim"), is_true("has denticles"), is_true("is wild"), is_true("is silent")]),
