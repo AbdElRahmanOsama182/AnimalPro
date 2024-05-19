@@ -1,7 +1,8 @@
 :- use_module(library(reif)).
 animals([animal(dog, [is_true("has fur"), is_true("barks"), is_true("is domestic"), is_true("does it run"), is_true("is regular-sized"), is_true("is omnivore")]),
         animal(cat, [is_true("has fur"), is_true("says meow"), is_true("is domestic"), is_true("does it run"), is_true("is small"), is_true("is carnivore")]),
-        animal(camel, [is_true("has fur"), is_true("grunts"), is_true("does it run"), is_true("is large"), is_true("is herbivore")])]).
+        animal(camel, [is_true("has fur"), is_true("grunts"), is_true("does it run"), is_true("is large"), is_true("is herbivore")]),
+        animal(bat, [is_true("has fur"), is_true("screeches"), is_true("does it fly"), is_true("is small"), is_true("is omnivore")])]).
 
 animal(A) :-
         animals(Animals),
