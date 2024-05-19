@@ -148,9 +148,7 @@ class AnimalGUI(QWidget):
     def check_result(self, output):
         if '=' in output:
             # A = animal_name
-            animal_name = output.split('=')[1].strip().strip('.')
-            # remove single quotes if exist
-            animal_name = animal_name.strip('\'')
+            animal_name = output.split('=')[1].strip().strip('.').strip('\'')
             print(f"Animal name: {animal_name}")
             self.display_animal_image(animal_name)
             self.restart_button.show()
@@ -188,11 +186,7 @@ class AnimalGUI(QWidget):
                 break
 
     def handle_submit(self, answer):
-        if answer in ['yes', 'no']:
-            self.send_query(answer + '.')
-        else:
-            QMessageBox.warning(self, "Invalid Input", "Please answer 'yes' or 'no'.")
-        print("Submit button clicked")
+        self.send_query(answer + '.')
 
     def display_animal_image(self, animal_name):
         # Hide the yes and no buttons
@@ -214,12 +208,10 @@ class AnimalGUI(QWidget):
         else:
             self.image_label.setPixmap(pixmap)
             self.image_label.setScaledContents(True)
-            # self.image_label.resize(200, 200)
             self.image_label.setFixedHeight(600)
             self.image_label.setFixedWidth(600)
             self.image_label.setAlignment(Qt.AlignCenter)
         self.adjustSize()
-        print("Displaying animal image")
 
     def display_mystery_image(self):
         # Display the mystery image initially
@@ -229,11 +221,9 @@ class AnimalGUI(QWidget):
         else:
             self.image_label.setPixmap(pixmap)
             self.image_label.setScaledContents(True)
-            # self.image_label.resize(200, 200)
             self.image_label.setFixedHeight(600)
             self.image_label.setFixedWidth(600)
             self.image_label.setAlignment(Qt.AlignCenter)
-        print("Displaying mystery image")
 
     def restart(self):
         self.prolog_process.terminate()

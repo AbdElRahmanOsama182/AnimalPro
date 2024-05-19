@@ -38,6 +38,7 @@ mapToCategory("does it run", movement).
 mapToCategory("does it fly", movement).
 mapToCategory("does it swim", movement).
 mapToCategory("does it crawl", movement).
+mapToCategory("does it climb", movement).
 mapToCategory("does it hop", movement).
 mapToCategory("does it fly & swim", movement).
 mapToCategory("does it swim & run", movement).
