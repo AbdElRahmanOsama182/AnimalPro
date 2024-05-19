@@ -198,7 +198,13 @@ class AnimalGUI(QWidget):
         self.no_button.hide()
         self.title.hide()
         self.question_label.hide()
-        self.result_label.setText(f"The animal you're thinking of is a {animal_name.capitalize()}.")
+        text = "The animal you're thinking of is "
+        if animal_name[0].lower() in ['a', 'e', 'i', 'o', 'u']:
+            text += "an "
+        else:
+            text += "a "
+        text += animal_name.capitalize() + "."
+        self.result_label.setText(text)
         self.result_label.show()
         pixmap = QPixmap(f"assets/{animal_name}.jpg")
         if pixmap.isNull():
