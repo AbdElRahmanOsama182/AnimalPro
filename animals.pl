@@ -63,6 +63,7 @@ animals([
         animal(chameleon, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("hisses")]),        
         animal(cat, [is_true("is carnivore"), is_true("is small"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says meow")]),
         animal(cheetah, [is_true("is carnivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("chirps")]),
+        animal(crocodile, [is_true("is carnivore"), is_true("is large"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("roars")]),
         animal(camel, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("grunts")]),
         animal(cow, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says moo")])
         ]).
