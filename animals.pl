@@ -31,11 +31,34 @@ condition_truth(is_true(Q), Answer, Known0, Known) :-
             Known0 = Known,
             ( format("~s?\n", [Q]),
               read(Answer),
-              Known = [known(Q,Answer)|Known0])).
+              map_question(Q,Property),
+              (Answer = yes -> Known = [known(Property, Answer)|Known0]  
+                                ; Known = [known(Q, Answer)|Known0]))).
 
 known_(What, Answer, Known, Truth) :-
-        if_(memberd_t(known(What,yes), Known),
+        map_question(What,Property),
+        if_(memberd_t(known(Property,yes), Known),
             ( Answer = yes, Truth = true ),
             if_(memberd_t(known(What,no), Known),
                 ( Answer = no, Truth = true),
                 Truth = false)).
+
+map_question("is omnivore", "diet").
+map_question("is carnivore", "diet").
+map_question("is herbivore", "diet").
+
+map_question("is regular-sized", "size").
+map_question("is large", "size").
+map_question("is small", "size").
+
+map_question("does it run", "locomotion").
+map_question("does it fly", "locomotion").
+
+map_question("has fur", "coating").
+
+map_question("is domestic", "domestic").
+
+map_question("barks", "sound").
+map_question("says meow", "sound").
+map_question("grunts", "sound").
+map_question("screeches", "sound").
