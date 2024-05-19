@@ -1,6 +1,6 @@
 import sys
 import subprocess
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QLineEdit, QMessageBox, QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox
 from PyQt5.QtGui import QPixmap, QFont
 from PyQt5.QtCore import Qt
 
@@ -20,8 +20,12 @@ class AnimalGUI(QWidget):
                 background-color: #f0f0f0;
             }
             QLabel {
-                font-size: 16px;
                 color: #333;
+                padding: 0px;
+                margin: 0px;
+            }
+            QLabel#questionLabel {
+                font-size: 18px;
             }
             QLineEdit {
                 font-size: 14px;
@@ -30,7 +34,7 @@ class AnimalGUI(QWidget):
                 border-radius: 5px;
             }
             QPushButton {
-                font-size: 14px;
+                font-size: 16px;
                 padding: 5px;
                 color: white;
                 border: none;
@@ -56,18 +60,28 @@ class AnimalGUI(QWidget):
             }
         """)
 
+
+        self.title = QLabel("Answer the questions to identify the animal:")
+        self.title.setFixedHeight(50)
+        self.title.setFont(QFont('Arial', 10, QFont.Normal))
+        self.layout.addWidget(self.title)
+
         self.question_label = QLabel("Answer the questions to identify the animal:")
+        self.question_label.setObjectName('questionLabel')
+        self.question_label.setFixedHeight(50)
         self.question_label.setAlignment(Qt.AlignCenter)
         self.question_label.setContentsMargins(0, 0, 0, 0)
         self.layout.addWidget(self.question_label)
 
         self.button_layout = QHBoxLayout()
         self.yes_button = QPushButton('Yes')
+        self.yes_button.setCursor(Qt.PointingHandCursor)
         self.yes_button.setObjectName('yesButton')
         self.yes_button.clicked.connect(lambda: self.handle_submit('yes'))
         self.button_layout.addWidget(self.yes_button)
 
         self.no_button = QPushButton('No')
+        self.no_button.setCursor(Qt.PointingHandCursor)
         self.no_button.setObjectName('noButton')
         self.no_button.clicked.connect(lambda: self.handle_submit('no'))
         self.button_layout.addWidget(self.no_button)
@@ -76,21 +90,30 @@ class AnimalGUI(QWidget):
 
         self.result_label = QLabel("")
         self.result_label.setAlignment(Qt.AlignCenter)
-        self.result_label.setFont(QFont('Arial', 14, QFont.Bold))
+        self.result_label.setFont(QFont('Arial', 12, QFont.Bold))
         self.layout.addWidget(self.result_label)
 
         self.image_label = QLabel("")
         self.image_label.setAlignment(Qt.AlignCenter)
+        self.image_label.setFixedHeight(60)
         self.layout.addWidget(self.image_label)
 
         self.restart_button = QPushButton('Restart')
         self.restart_button.setObjectName('submitButton')
+        self.restart_button.setFixedWidth(200)
+        self.restart_button.setCursor(Qt.PointingHandCursor)
         self.restart_button.clicked.connect(self.restart)
         self.restart_button.hide()
-        self.layout.addWidget(self.restart_button)
+        # remove margin and padding
+        self.restart_button.setContentsMargins(0, 0, 0, 0)
+        self.layout.addWidget(self.restart_button, alignment=Qt.AlignCenter)
+        # self.layout.addWidget(self.restart_button)
 
         self.setLayout(self.layout)
         self.resize(400, 400)
+
+        # Display the mystery image initially
+        self.display_mystery_image()
 
     def initProlog(self):
         self.prolog_process = subprocess.Popen(
@@ -117,7 +140,7 @@ class AnimalGUI(QWidget):
             self.restart_button.show()
         else:
             self.result_label.setText("I'm not sure what animal you're thinking of.")
-            self.image_label.clear()
+            # self.image_label.clear()
             self.restart_button.show()
 
     def read_output(self):
@@ -135,9 +158,10 @@ class AnimalGUI(QWidget):
                     break
                 elif 'false.' in line:
                     self.result_label.setText("I'm not sure what animal you're thinking of.")
-                    self.image_label.clear()
+                    # self.image_label.clear()
                     self.yes_button.hide()
                     self.no_button.hide()
+                    self.title.hide()
                     self.question_label.hide()
                     self.restart_button.show()
                     break
@@ -152,9 +176,10 @@ class AnimalGUI(QWidget):
         print("Submit button clicked")
 
     def display_animal_image(self, animal_name):
-        # hide the yes and no buttons
+        # Hide the yes and no buttons
         self.yes_button.hide()
         self.no_button.hide()
+        self.title.hide()
         self.question_label.hide()
         pixmap = QPixmap(f"assets/{animal_name}.jpg")
         if pixmap.isNull():
@@ -162,8 +187,25 @@ class AnimalGUI(QWidget):
         else:
             self.image_label.setPixmap(pixmap)
             self.image_label.setScaledContents(True)
-            self.image_label.resize(200, 200)
+            # self.image_label.resize(200, 200)
+            self.image_label.setFixedHeight(400)
+            self.image_label.setFixedWidth(400)
+            self.image_label.setAlignment(Qt.AlignCenter)
         print("Displaying animal image")
+
+    def display_mystery_image(self):
+        # Display the mystery image initially
+        pixmap = QPixmap("assets/mystery.jpeg")
+        if pixmap.isNull():
+            self.image_label.setText("No mystery image found")
+        else:
+            self.image_label.setPixmap(pixmap)
+            self.image_label.setScaledContents(True)
+            # self.image_label.resize(200, 200)
+            self.image_label.setFixedHeight(400)
+            self.image_label.setFixedWidth(400)
+            self.image_label.setAlignment(Qt.AlignCenter)
+        print("Displaying mystery image")
 
     def restart(self):
         self.prolog_process.terminate()
@@ -173,8 +215,10 @@ class AnimalGUI(QWidget):
         # Reset the UI components
         self.result_label.setText("")
         self.image_label.clear()
+        self.display_mystery_image()
         self.yes_button.show()
         self.no_button.show()
+        self.title.show()
         self.question_label.show()
         self.restart_button.hide()
         self.resize(400, 400)
