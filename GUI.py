@@ -149,6 +149,8 @@ class AnimalGUI(QWidget):
         if '=' in output:
             # A = animal_name
             animal_name = output.split('=')[1].strip().strip('.')
+            # remove single quotes if exist
+            animal_name = animal_name.strip('\'')
             print(f"Animal name: {animal_name}")
             self.display_animal_image(animal_name)
             self.restart_button.show()

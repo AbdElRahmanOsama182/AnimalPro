@@ -39,6 +39,8 @@ mapToCategory("does it fly", movement).
 mapToCategory("does it swim", movement).
 mapToCategory("does it crawl", movement).
 mapToCategory("does it hop", movement).
+mapToCategory("does it fly & swim", movement).
+mapToCategory("does it swim & run", movement).
 
 mapToCategory("is tiny", size).
 mapToCategory("is small", size).
@@ -60,11 +62,12 @@ animals([
         animal(ostrich, [is_true("is omnivore"), is_true("is large"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("boom")]),
         animal(dog, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("barks")]),
         animal(monkey, [is_true("is omnivore"), is_true("is regular-sized"), is_true("does it climb"), is_true("has fur"), is_true("is wild"), is_true("chatter")]),
+        animal('flying fish', [is_true("is omnivore"), is_true("is small"), is_true("does it fly & swim"), is_true("has scales"), is_true("is wild"), is_true("is silent")]),
+        animal(penguin, [is_true("is omnivore"), is_true("is small"), is_true("does it swim & run"), is_true("has fur"), is_true("is domestic"), is_true("squawks")]),
         animal(chicken, [is_true("is omnivore"), is_true("is small"), is_true("does it run"), is_true("has feathers"), is_true("is domestic"), is_true("clucks")]),
         animal(bat, [is_true("is omnivore"), is_true("is small"), is_true("does it fly"), is_true("has fur"), is_true("is wild"), is_true("screeches")]),
-        animal(chameleon, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("hisses")]),        
-        animal(penguin, [is_true("is omnivore"), is_true("is small"), is_true("does it swim & run"), is_true("has fur"), is_true("is domestic"), is_true("squawks")]),
         animal(turtle, [is_true("is omnivore"), is_true("is small"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("clacks")]),
+        animal(chameleon, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("hisses")]),        
         animal(lizard, [is_true("is omnivore"), is_true("is small"), is_true("does it crawl"), is_true("has scales"), is_true("is wild"), is_true("is silent")]),
         animal(rat, [is_true("is omnivore"), is_true("is tiny"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("screeches")]),
 
