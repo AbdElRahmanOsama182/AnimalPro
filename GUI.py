@@ -1,7 +1,7 @@
 import sys
 import subprocess
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton, QHBoxLayout, QMessageBox
-from PyQt5.QtGui import QPixmap, QFont
+from PyQt5.QtGui import QPixmap, QFont, QIcon
 from PyQt5.QtCore import Qt
 
 class AnimalGUI(QWidget):
@@ -12,7 +12,8 @@ class AnimalGUI(QWidget):
         self.send_query('animal(A).')
 
     def initUI(self):
-        self.setWindowTitle('Animal Identifier')
+        self.setWindowTitle('AnimalPro')
+        self.setWindowIcon(QIcon('assets/mystery.jpg'))
         self.layout = QVBoxLayout()
 
         self.setStyleSheet("""
