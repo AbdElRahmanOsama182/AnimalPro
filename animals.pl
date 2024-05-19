@@ -14,8 +14,8 @@ mapToCategory("clicks", sound).
 mapToCategory("trumpets", sound).
 mapToCategory("croaks", sound).
 mapToCategory("bleats", sound).
-mapToCategory("ss", sound).
-mapToCategory("msms", sound).
+mapToCategory("snuffles", sound).
+mapToCategory("hums", sound).
 mapToCategory("chortles", sound).
 mapToCategory("chatters", sound).
 mapToCategory("booms", sound).
@@ -39,6 +39,8 @@ mapToCategory("does it fly", movement).
 mapToCategory("does it swim", movement).
 mapToCategory("does it crawl", movement).
 mapToCategory("does it hop", movement).
+mapToCategory("does it fly & swim", movement).
+mapToCategory("does it swim & run", movement).
 mapToCategory("does it fly & swim", movement).
 mapToCategory("does it swim & run", movement).
 
@@ -84,11 +86,12 @@ animals([
         animal(snake, [is_true("is carnivore"), is_true("is regular-sized"), is_true("does it crawl"), is_true("has skin"), is_true("is wild"), is_true("hisses")]),
         animal(cat, [is_true("is carnivore"), is_true("is small"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("says meow")]),
         animal(octopus, [is_true("is carnivore"), is_true("is small"), is_true("does it swim"), is_true("has skin"), is_true("is wild"), is_true("is silent")]),
-        animal(frog, [is_true("is carnivore"), is_true("is small"), is_true("does it hop"), is_true("has skin"), is_true("is wild"), is_true("croaks")]),
-        animal(giraffe, [is_true("is herbivore"), is_true("is huge"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("bleats")]),
         animal(owl, [is_true("is carnivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("hoots")]),
+        animal(frog, [is_true("is carnivore"), is_true("is small"), is_true("does it hop"), is_true("has skin"), is_true("is wild"), is_true("croaks")]),
         animal(jellyfish, [is_true("is carnivore"), is_true("is small"), is_true("does it swim"), is_true("has jelly"), is_true("is wild"), is_true("is silent")]),
+        
         animal(hippopotamus, [is_true("is herbivore"), is_true("is huge"), is_true("does it swim & run"), is_true("has skin"), is_true("is wild"), is_true("grunts")]),
+        animal(giraffe, [is_true("is herbivore"), is_true("is huge"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("bleats")]),
         animal(elephant, [is_true("is herbivore"), is_true("is huge"), is_true("does it run"), is_true("has skin"), is_true("is wild"), is_true("trumpets")]),
         animal(kangaroo, [is_true("is herbivore"), is_true("is large"), is_true("does it hop"), is_true("has fur"), is_true("is wild"), is_true("chortles")]),
         animal(panda, [is_true("is herbivore"), is_true("is large"), is_true("does it climb"), is_true("has fur"), is_true("is wild"), is_true("bleats")]),
@@ -99,6 +102,8 @@ animals([
         animal(peacock, [is_true("is herbivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("calls")]),
         animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawks")]),
         animal(hummingbird, [is_true("is herbivore"), is_true("is tiny"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("humms")])
+        animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawks")]),
+        animal(hummingbird, [is_true("is herbivore"), is_true("is tiny"), is_true("does it fly"), is_true("has feathers"), is_true("is wild"), is_true("hums")])
         ]).
         
 animal(A) :-
