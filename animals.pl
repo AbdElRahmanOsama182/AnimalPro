@@ -84,7 +84,7 @@ animals([
         animal(camel, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is domestic"), is_true("grunts")]),
         animal(zebra, [is_true("is herbivore"), is_true("is large"), is_true("does it run"), is_true("has fur"), is_true("is wild"), is_true("barks")]),
         animal(peacock, [is_true("is herbivore"), is_true("is regular-sized"), is_true("does it run"), is_true("has feathers"), is_true("is wild"), is_true("calls")]),
-        animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_false("is domestic"), is_true("squawk")])
+        animal(parrot, [is_true("is herbivore"), is_true("is small"), is_true("does it fly"), is_true("has feathers"), is_true("is domestic"), is_true("squawk")])
         ]).
         
 animal(A) :-
