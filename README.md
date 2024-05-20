@@ -36,32 +36,32 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
 cd AnimalPro
 ```
 
-1. Open the SWI-Prolog terminal:
+4. Open the SWI-Prolog terminal:
 
 ```bash
 swipl
 ```
 
-1. Install the **`reif`** package:
+5. Install the **`reif`** package:
 
 ```bash
 pack_install(reif).
 ```
 
-1. Consult the **`animals.pl`** file:
+6. Consult the **`animals.pl`** file:
 
 ```bash
 consult('animals.pl').
 ```
 
-1. Go back to the terminal
-2. Install required Python packages:
+7. Go back to the terminal
+8. Install required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-1. Run the GUI:
+9. Run the GUI:
 
 ```bash
 python GUI.py
