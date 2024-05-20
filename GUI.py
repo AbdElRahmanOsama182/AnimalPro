@@ -166,7 +166,8 @@ class AnimalGUI(QWidget):
                 print("Line: ", line)
                 output.append(line)
                 if line.strip().endswith('?'):
-                    question = line.strip().capitalize()[:-1] + ' ?'
+                    question = line.strip()[:-1] + ' ?'
+                    question = question[0].upper() + question[1:]
                     self.question_label.setText(question)
                     break
                 elif '=' in line:
