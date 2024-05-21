@@ -2,7 +2,7 @@
 
 Welcome to AnimalPro, your expert guide in the world of zoology! AnimalPro is an application designed to assist users in identifying various species of animals quickly and accurately. Powered by Prolog's logical programming capabilities and PyQt's graphical interface.
 
-![Untitled](assets/readMe/AnimalProGUI.png)
+<p align="center"><img src="assets/readMe/AnimalProGUI.png" alt="AnimalProGUI">
 
 
 ## Overview:
