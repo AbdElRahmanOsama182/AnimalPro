@@ -26,6 +26,21 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
     
     AnimalPro interacts with the user by asking questions about the characteristics of the animal they are interested in, then updates the known facts based on the user's answers.
     
+
+5. **Graphical User Interface:**
+    
+    AnimalPro boasts an intuitive graphical user interface (GUI) that enhances user interaction and experience. The GUI streamlines the querying process, allowing users to provide answers about an animal's characteristics with ease.
+    
+<table align="center">
+  <tr>
+    <td><img src="./assets/readMe/question-1.png" alt="Interactive querying." width="300"></td>
+    <td><img src="./assets/readMe/answer-1.png" alt="Result of the queries (Panda)." width="300"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><img src="./assets/readMe/unknown-1.png" alt="Result of an unknown animal." width="350"></td>
+  </tr>
+</table>
+
 ## Code Snippets:
 
 1. **Mapping Characteristics to Categories**:
@@ -114,12 +129,13 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
     updateCategory(_, Q, no, Known0, [known(Q, no)|Known0]).
     ```
     
-    If the answer is "yes", it implies that the current characteristic is true, so all other characteristics in the same category are marked as false. If the answer is "no", only the current characteristic is marked as false.  
+    If the answer is "yes", it implies that the current characteristic is true, so all other characteristics in the same category are marked as false. If the answer is "no", only the current characteristic is marked as false.
+    
 
 ## How to Run:
 
 1. Install SWI-Prolog from the official site: [https://www.swi-prolog.org/download/stable](https://www.swi-prolog.org/download/stable)
-2.  Clone AnimalPro repository.
+2. Clone AnimalPro repository.
 3. Jump into AnimalPro directory:
 
 ```bash
@@ -138,26 +154,24 @@ swipl
 pack_install(reif).
 ```
 
-6. Consult the **`animals.pl`** file:
-
-```bash
-consult('animals.pl').
-```
-
-7. Go back to the terminal
-8. Install required Python packages:
+6. Go back to the previous terminal.
+7. Install required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-9. Run the GUI:
+8. Run the GUI:
 
 ```bash
 python GUI.py
 ```
 
+## Sample of Queries and Their Results:
+
+In the following link, you can watch some interactive queries for our program:
+- [https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing](https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing)
+
 ## Conclusion:
 
 If you find a weird animal in your backyard, don't worry! You can use AnimalPro to learn more about it. Just tell us what it looks like or any special things it does, and we'll try to tell you what it might be.
-
