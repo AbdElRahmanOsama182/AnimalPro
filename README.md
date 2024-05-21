@@ -2,7 +2,11 @@
 
 Welcome to AnimalPro, your expert guide in the world of zoology! AnimalPro is an application designed to assist users in identifying various species of animals quickly and accurately. Powered by Prolog's logical programming capabilities and PyQt's graphical interface.
 
+<<<<<<< HEAD
 ![Untitled](assets/readMe/mystery.png)
+=======
+![Untitled](assets/Untitled.png)
+>>>>>>> 03dab2b580132e91e344554027776ad48405083c
 
 ## Overview:
 
@@ -125,32 +129,32 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
 cd AnimalPro
 ```
 
-1. Open the SWI-Prolog terminal:
+4. Open the SWI-Prolog terminal:
 
 ```bash
 swipl
 ```
 
-1. Install the **`reif`** package:
+5. Install the **`reif`** package:
 
 ```bash
 pack_install(reif).
 ```
 
-1. Consult the **`animals.pl`** file:
+6. Consult the **`animals.pl`** file:
 
 ```bash
 consult('animals.pl').
 ```
 
-1. Go back to the terminal
-2. Install required Python packages:
+7. Go back to the terminal
+8. Install required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-1. Run the GUI:
+9. Run the GUI:
 
 ```bash
 python GUI.py
@@ -159,3 +163,10 @@ python GUI.py
 ## Conclusion:
 
 If you find a weird animal in your backyard, don't worry! You can use AnimalPro to learn more about it. Just tell us what it looks like or any special things it does, and we'll try to tell you what it might be.
+<<<<<<< HEAD
+=======
+
+- A Trial Video:
+    
+    [AnimalPro.mp4](assets/AnimalPro.mp4)
+>>>>>>> 03dab2b580132e91e344554027776ad48405083c
