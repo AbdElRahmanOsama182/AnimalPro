@@ -133,11 +133,11 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
     
     If the answer is "yes", it implies that the current characteristic is true, so all other characteristics in the same category are marked as false. If the answer is "no", only the current characteristic is marked as false.
     
-
 ## Sample of Queries and Their Results:
 
-In the following link, you can watch some interactive queries for our program:
-- [https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing](https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing)
+Here you can watch some interactive queries for our program:
+
+https://github.com/AbdElRahmanOsama182/AnimalPro/assets/52374998/18a0d041-bc7b-4049-af85-03443ef904d9
 
 ## **How We Built the Knowledge Base:**
 
@@ -199,13 +199,6 @@ pip install -r requirements.txt
 ```bash
 python GUI.py
 ```
-
-## Sample of Queries and Their Results:
-
-Here you can watch some interactive queries for our program:
-
-https://github.com/AbdElRahmanOsama182/AnimalPro/assets/52374998/18a0d041-bc7b-4049-af85-03443ef904d9
-
 
 ## Conclusion:
 
