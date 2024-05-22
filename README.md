@@ -65,6 +65,8 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
     .....
     ```
     
+    Each characteristic is mapped into a unique category.
+    
 2. **Defining Animal Characteristics**:
     
     ```prolog
@@ -84,7 +86,7 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
     .....
     ```
     
-    Each animal is associated with a list of characteristics, which are then used for matching.
+    Each animal is associated with a list of characteristics, which are then used for matching. We will discuss below how we gathered this data.
     
 
 3. **Checking Animal Rules**:
@@ -132,6 +134,37 @@ AnimalPro uses a knowledge base of facts and rules in Prolog to facilitate the i
     If the answer is "yes", it implies that the current characteristic is true, so all other characteristics in the same category are marked as false. If the answer is "no", only the current characteristic is marked as false.
     
 
+## Sample of Queries and Their Results:
+
+In the following link, you can watch some interactive queries for our program:
+- [https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing](https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing)
+
+## **How We Built the Knowledge Base:**
+
+Creating a robust knowledge base is essential for the effectiveness of our animal expert system. We gathered data from a comprehensive questionnaire and analyzed the results to identify unique animal properties. This information was crucial for defining the facts and rules in our Prolog knowledge base.
+
+### **Data Collection**
+
+We used a Google Form to collect data from participants. The questionnaire was designed to gather specific attributes and characteristics of various animals. You can access the questionnaire [in this link](https://docs.google.com/forms/d/e/1FAIpQLScZzcyIDShdayAXAXS1TjEc1Cis3oP9Ezn7JjF8kYDUtOHYmg/viewform).
+
+<p align="center"><img src="assets/readMe/form-1.png" alt="form-1">
+
+Samples of form responses which helped us build the program:
+
+<p align="center"><img src="assets/readMe/form-2.png" alt="form-2">
+
+### **Data Analysis**
+
+After collecting the data, we compiled the results into an a spreadsheet, which includes detailed statistics on the frequency and uniqueness of various animal properties. The analysis focused on identifying properties that are most useful for distinguishing between different animals. You can view the Google spreadsheet and its analysis [in this link](https://docs.google.com/spreadsheets/d/1Ll5xK7ckSWuUEFQsRzasV9l0naGa3maGsyJLiXQWBUg/edit?usp=sharing).
+
+Here are some screenshots from it:
+
+<p align="center"><img src="assets/readMe/sheet-2.png" alt="sheet-2">
+
+<p align="center"><img src="assets/readMe/sheet-1.png" alt="sheet-1">
+
+- After organizing the data, we built the Prolog knowledge base as discussed above.
+
 ## How to Run:
 
 1. Install SWI-Prolog from the official site: [https://www.swi-prolog.org/download/stable](https://www.swi-prolog.org/download/stable)
@@ -167,11 +200,14 @@ pip install -r requirements.txt
 python GUI.py
 ```
 
-## Sample of Queries and Their Results:
-
-In the following link, you can watch some interactive queries for our program:
-- [https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing](https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing)
-
 ## Conclusion:
 
 If you find a weird animal in your backyard, don't worry! You can use AnimalPro to learn more about it. Just tell us what it looks like or any special things it does, and we'll try to tell you what it might be.
+
+## Contributors:
+
+- AbdElRahman Osama
+- AbdElRahman Bassam 
+- AbdElRahman Deif
+- Ahmed Youssef 
+- Mourad Mahgoub
