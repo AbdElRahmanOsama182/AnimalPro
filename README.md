@@ -200,6 +200,13 @@ pip install -r requirements.txt
 python GUI.py
 ```
 
+## Sample of Queries and Their Results:
+
+Here you can watch some interactive queries for our program:
+
+https://github.com/AbdElRahmanOsama182/AnimalPro/assets/52374998/18a0d041-bc7b-4049-af85-03443ef904d9
+
+
 ## Conclusion:
 
 If you find a weird animal in your backyard, don't worry! You can use AnimalPro to learn more about it. Just tell us what it looks like or any special things it does, and we'll try to tell you what it might be.
