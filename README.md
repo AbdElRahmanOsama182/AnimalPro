@@ -169,8 +169,10 @@ python GUI.py
 
 ## Sample of Queries and Their Results:
 
-In the following link, you can watch some interactive queries for our program:
-- [https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing](https://drive.google.com/file/d/1T1aGv_s8f_Egu-Wz4K2IzNrGMFu9rcvh/view?usp=sharing)
+Here you can watch some interactive queries for our program:
+
+https://github.com/AbdElRahmanOsama182/AnimalPro/assets/52374998/18a0d041-bc7b-4049-af85-03443ef904d9
+
 
 ## Conclusion:
 
